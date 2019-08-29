@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Hello World | Hexo</title>
+  <title>简单死锁 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+  <meta name="description" content="在实际编程中，要尽量避免出现死锁的情况，但是想要故意写一个死锁的程序时似乎也不太简单  ，以下是一个简单的死锁例子。 线程的同步化可能会造成死锁，死锁发生在两个线程相互持有对方正在等待的东西（实际是两个线程共享的东西）。只要有两个线程和两个对象就可能产生死锁。 /**   一个简单的死锁类   当DeadLock类的对象flag==1时（td1），先锁定o1,睡眠500毫秒   而td1在睡眠的时">
+<meta name="keywords" content="死锁">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2019/08/20/hello-world/index.html">
+<meta property="og:title" content="简单死锁">
+<meta property="og:url" content="http://yoursite.com/2019/08/30/filename/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="在实际编程中，要尽量避免出现死锁的情况，但是想要故意写一个死锁的程序时似乎也不太简单  ，以下是一个简单的死锁例子。 线程的同步化可能会造成死锁，死锁发生在两个线程相互持有对方正在等待的东西（实际是两个线程共享的东西）。只要有两个线程和两个对象就可能产生死锁。 /**   一个简单的死锁类   当DeadLock类的对象flag==1时（td1），先锁定o1,睡眠500毫秒   而td1在睡眠的时">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-08-20T13:54:20.507Z">
+<meta property="og:updated_time" content="2019-08-29T17:02:56.534Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="简单死锁">
+<meta name="twitter:description" content="在实际编程中，要尽量避免出现死锁的情况，但是想要故意写一个死锁的程序时似乎也不太简单  ，以下是一个简单的死锁例子。 线程的同步化可能会造成死锁，死锁发生在两个线程相互持有对方正在等待的东西（实际是两个线程共享的东西）。只要有两个线程和两个对象就可能产生死锁。 /**   一个简单的死锁类   当DeadLock类的对象flag==1时（td1），先锁定o1,睡眠500毫秒   而td1在睡眠的时">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -154,39 +155,79 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-hello-world" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-filename" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      简单死锁
     </h1>
   
 
         
-        <a href="/2019/08/20/hello-world/" class="archive-article-date">
-  	<time datetime="2019-08-20T13:54:20.507Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-20</time>
+        <a href="/2019/08/30/filename/" class="archive-article-date">
+  	<time datetime="2019-08-29T16:50:50.435Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-30</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <p>在实际编程中，要尽量避免出现死锁的情况，但是想要故意写一个死锁的程序时似乎也不太简单  ，以下是一个简单的死锁例子。</p>
+<p>线程的同步化可能会造成死锁，死锁发生在两个线程相互持有对方正在等待的东西（实际是两个线程共享的东西）。只要有两个线程和两个对象就可能产生死锁。</p>
+<p>/** </p>
+<ul>
+<li><p>一个简单的死锁类 </p>
+</li>
+<li><p>当DeadLock类的对象flag==1时（td1），先锁定o1,睡眠500毫秒 </p>
+</li>
+<li><p>而td1在睡眠的时候另一个flag==0的对象（td2）线程启动，先锁定o2,睡眠500毫秒 </p>
+</li>
+<li><p>td1睡眠结束后需要锁定o2才能继续执行，而此时o2已被td2锁定； </p>
+</li>
+<li><p>td2睡眠结束后需要锁定o1才能继续执行，而此时o1已被td1锁定； </p>
+</li>
+<li><p>td1、td2相互等待，都需要得到对方锁定的资源才能继续执行，从而死锁。 </p>
+</li>
+<li><p>/<br>public class DeadLock implements Runnable {<br>   public int flag = 1;<br>   //静态对象是类的所有对象共享的<br>   private static Object o1 = new Object(), o2 = new Object();<br>   @Override<br>   public void run() {  </p>
+<pre><code>System.out.println(&quot;flag=&quot; + flag);  
+if (flag == 1) {  
+    synchronized (o1) {  
+        try {  
+            Thread.sleep(500);  
+        } catch (Exception e) {  
+            e.printStackTrace();  
+        }  
+        synchronized (o2) {  
+            System.out.println(&quot;1&quot;);  
+        }  
+    }  
+}  
+if (flag == 0) {  
+    synchronized (o2) {  
+        try {  
+            Thread.sleep(500);  
+        } catch (Exception e) {  
+            e.printStackTrace();  
+        }  
+        synchronized (o1) {  
+            System.out.println(&quot;0&quot;);  
+        }  
+    }  
+}  </code></pre><p>   }  </p>
+<p>   public static void main(String[] args) {  </p>
+<pre><code>DeadLock td1 = new DeadLock();  
+DeadLock td2 = new DeadLock();  
+td1.flag = 1;  
+td2.flag = 0;  
+//td1,td2都处于可执行状态，但JVM线程调度先执行哪个线程是不确定的。  
+//td2的run()可能在td1的run()之前运行  
+new Thread(td1).start();  
+new Thread(td2).start();  </code></pre><p>   }<br>}</p>
+</li>
+</ul>
 
       
 
@@ -216,6 +257,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">死锁</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -266,7 +318,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/08/20/hello-world/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/08/30/filename/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -278,20 +330,6 @@
 </article>
 
   
-<nav id="article-nav">
-  
-    <a href="/2019/08/20/我的第一篇博客文章/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          我的第一篇博客文章
-        
-      </div>
-    </a>
-  
-  
-</nav>
-
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -410,6 +448,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">死锁</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
